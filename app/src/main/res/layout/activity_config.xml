@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfigActivity"
+    android:background="@color/colorMainBg">
+
+    <TextView
+        android:id="@+id/actionBarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/general_12"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:gravity="center_vertical"
+        android:text="@string/configure_title"
+        android:textColor="@color/text_gray_2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:elevation="8dp"
+        android:shadowColor="@color/main_bg"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="16" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionBarTitle"
+        android:layout_above="@id/openBtn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/targetContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/rounded_group_bg"
+                android:clipToPadding="false"
+                android:elevation="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_target"
+                    android:textSize="18sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/colorTextGray2" />
+
+                <TextView
+                    android:id="@+id/targetErrorDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="4dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_red" />
+
+                <Spinner
+                    android:id="@+id/targetSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="2dp"
+                    android:spinnerMode="dropdown"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/grabberBtn"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/grabber"
+                    android:textColor="@drawable/button_text_color"
+                    android:backgroundTint="@drawable/button_bg_tint"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="end"
+                    android:elevation="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dirContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/rounded_group_bg"
+                android:clipToPadding="false"
+                android:elevation="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dir_select"
+                    android:textSize="18sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/colorTextGray2" />
+
+                <TextView
+                    android:id="@+id/selectDirDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_select"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@drawable/prm_text_color"
+                    android:enabled="false" />
+
+                <Button
+                    android:id="@+id/selectDirBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_directory"
+                    android:textColor="@drawable/button_text_color"
+                    android:backgroundTint="@drawable/button_bg_tint"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_gravity="end"
+                    android:elevation="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/rounded_group_bg"
+                android:clipToPadding="false"
+                android:elevation="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/storage_prm"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorTextGray2" />
+
+                <TextView
+                    android:id="@+id/storagePrmDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_granted"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:textColor="@drawable/prm_text_color"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:enabled="false" />
+
+                <Button
+                    android:id="@+id/storagePrmBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@drawable/button_bg_tint"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/grant"
+                    android:textColor="@drawable/button_text_color"
+                    tools:ignore="DuplicateSpeakableTextCheck"
+                    android:elevation="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/rounded_group_bg"
+                android:clipToPadding="false"
+                android:elevation="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/battery_prm"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorTextGray2" />
+
+                <TextView
+                    android:id="@+id/batteryPrmDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_disabled"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:textColor="@drawable/prm_text_color"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:enabled="false" />
+
+                <LinearLayout
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end">
+
+                    <Button
+                        android:id="@+id/batteryPrmBtn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disable"
+                        android:textColor="@drawable/button_text_color"
+                        android:backgroundTint="@drawable/button_bg_tint"
+                        android:paddingStart="32dp"
+                        android:paddingEnd="32dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="end"
+                        android:elevation="2dp" />
+
+                    <Button
+                        android:id="@+id/batteryCheckBtn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/check"
+                        android:textColor="@drawable/button_text_color"
+                        android:backgroundTint="@drawable/button_bg_tint"
+                        android:paddingStart="32dp"
+                        android:paddingEnd="32dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="end"
+                        android:elevation="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/openBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/config_open"
+        android:layout_alignParentBottom="true"
+        android:enabled="false"
+        android:backgroundTint="@drawable/button_bg_tint"
+        android:textColor="@drawable/button_text_color"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="20sp"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="2dp" />
+
+</RelativeLayout>

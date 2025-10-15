@@ -1,0 +1,20 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.WikiApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/general_11</item>
+        <item name="colorPrimaryVariant">@color/general_13</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/general_11</item>
+        <item name="colorSecondaryVariant">@color/general_13</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <color name="colorMainBg">@color/main_bg_light</color>
+    <color name="colorSecondaryBg">@color/secondary_bg_light</color>
+    <color name="colorTextGray2">@color/text_gray_2_light</color>
+    <color name="colorTextGreen">@color/text_green_light</color>
+</resources>

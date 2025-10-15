@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+    <color name="transparent">#0000</color>
+    <color name="main_bg">#333</color>
+    <color name="main_bg_light">#CCC</color>
+    <color name="secondary_bg">#444</color>
+    <color name="secondary_bg_light">#BBB</color>
+    <color name="general_11">#58E</color>
+    <color name="general_12">#359</color>
+    <color name="general_13">#46C</color>
+    <color name="general_21">#C63</color>
+    <color name="general_22">#A41</color>
+    <color name="text_gray_1">#333</color>
+    <color name="text_gray_2">#EEE</color>
+    <color name="text_gray_2_light">#111</color>
+    <color name="text_gray_3">#666</color>
+    <color name="text_red">#C66</color>
+    <color name="text_green">#6C6</color>
+    <color name="text_green_light">#373</color>
+</resources>
